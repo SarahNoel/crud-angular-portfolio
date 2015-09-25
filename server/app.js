@@ -10,6 +10,11 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 
 
+// seed database
+var databaseSeed = require('../seed');
+databaseSeed();
+
+
 // *** routes *** //
 var api = require('./routes/api.js');
 

@@ -87,7 +87,7 @@ input{
   background-color: #613d6f;
 }
 
-.btn-success, .btn-success:disabled, .btn-success:disabled:hover{
+.btn-success, .btn-success:disabled, .btn-success:disabled:hover, .btn-success:active{
   background-color: #008282;
   border: #008282
 }

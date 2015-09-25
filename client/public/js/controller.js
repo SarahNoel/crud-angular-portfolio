@@ -10,8 +10,8 @@ app.controller('MainController',['$scope', '$http', 'PortfolioService', function
   $scope.updateOne = function(){
     PortfolioService.updateOne($scope, $http, this);
   };
-  $scope.deleteOne = function(){
-    PortfolioService.deleteOne($scope, $http, this);
+  $scope.deleteOne = function(id){
+    PortfolioService.deleteOne($scope, $http, id);
   };
 
   PortfolioService.getAll($scope, $http);

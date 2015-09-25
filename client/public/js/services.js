@@ -75,6 +75,7 @@ app.factory('PortfolioService', function(){
   };
 
   PortfolioService.deleteOne = function($scope, $http, id){
+    console.log(id);
     $http.delete('/api/v1/project/'+id)
     .then(function(data){
     PortfolioService.getAll($scope, $http);

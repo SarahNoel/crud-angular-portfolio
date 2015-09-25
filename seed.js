@@ -8,7 +8,7 @@ var projectSeed = [
   'tags': ['JS, HTML, CSS, APIs'],
   'group': false,
   'group_members': 'N/A',
-  'url': 'do-i-have-everything.herokuapp.com/'
+  'url': 'http://do-i-have-everything.herokuapp.com/'
   },
   {
   'name': 'Reddit Places Clone',
@@ -16,7 +16,7 @@ var projectSeed = [
   'tags': ['Angular'],
   'group': false,
   'group_members': 'N/A',
-  'url': 'github.com/SarahNoel/reddit-clone'
+  'url': 'http://github.com/SarahNoel/reddit-clone'
   },
   {
   'name': 'Translator App',
@@ -24,7 +24,7 @@ var projectSeed = [
   'tags': ['Node.js, Express.js, MongoDB, Mongoose, jQuery, Javascript, HTML, CSS, Bing Translator API.'],
   'group': true,
   'group_members': 'Zoe Adelman, Lucy Cifferello, Kiersten Hill',
-  'url': 'github.com/SarahNoel/hola-mundo-translator'
+  'url': 'http://github.com/SarahNoel/hola-mundo-translator'
   },
   {
   'name': 'Node Github Contest',
@@ -32,7 +32,7 @@ var projectSeed = [
   'tags': ['Node.js, Express.js, jQuery, Javascript, HTML, CSS'],
   'group': false,
   'group_members': 'N/A',
-  'url': 'github.com/SarahNoel/node-github-contest'
+  'url': 'http://github.com/SarahNoel/node-github-contest'
   }
 
 ];

@@ -1,28 +1,33 @@
 body {
   padding: 50px;
   font-family: 'Poiret One', cursive;
+  background-color: beige;
 }
 
 a {
-  color: #00B7FF;
+  color: #00004c;
+  text-decoration: underline;
 }
 
 table{
   margin-top: 15px;
   width: 100%;
+  background-color: #bed68b;
 }
 
-.project-table{
-  padding: 5px;
-}
+
 
 th{
+  font-size: 16px;
   padding: 5px;
   text-align: center;
+  background-color: #d6c98b;
+  color: white;
 }
 
 td{
   padding: 5px;
+
 }
 
 .btn-edit{
@@ -39,7 +44,7 @@ td{
 }
 
 .fill{
-  background-color: beige;
+  background-color: #a4b9bd;
 }
 
 input{
@@ -57,6 +62,12 @@ input{
 
 .title-info{
   text-align: center;
+  background-color: #c35c5c;
+  padding: 10px;
+  width: 50%;
+  margin: auto;
+  border-radius: 15px;
+  color: white;
 }
 
 .width{
@@ -66,4 +77,22 @@ input{
 .edit-buttons{
   margin: auto;
   display: table;
+}
+
+.table-bordered{
+  border: thick black;
+}
+
+.btn-primary{
+  background-color: #7a4d8b;
+  border: #7a4d8b;
+}
+
+.btn-success{
+  background-color: #008282;
+  border: #008282
+}
+
+.project-table{
+  padding: 5px;
 }

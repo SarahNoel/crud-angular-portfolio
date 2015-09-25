@@ -15,7 +15,6 @@
     </div>
     <br>
     <br>
-
     <div class ='width'>
       <button ng-hide='hide' ng-click = 'hide = !hide; update = true; edit=true' class= 'btn btn-primary btn-add'>Add New Exercise</button>
     <br>
@@ -38,7 +37,12 @@
           <td ng-repeat="tag in project.tags"> {{tag}} </td>
           <td> {{project.group | groupies}} </td>
           <td ng-repeat="member in project.group_members"> {{member}} </td>
-          <td><div class= 'edit-buttons'><button class ='btn btn-success btn-edit' ng-click= "getOne(project._id)"><span class="glyphicon glyphicon-pencil"></span></button><button class ='btn-edit btn btn-danger' ng-click = 'deleteOne(project._id)'><span class="glyphicon glyphicon-trash"></span></button></div></td>
+          <td>
+          <div class= 'edit-buttons'>
+            <button class ='btn btn-success btn-edit' ng-click= "getOne(project._id)"><span class="glyphicon glyphicon-pencil"></span></button>
+
+            <button class ='btn-edit btn btn-danger' ng-click = 'deleteOne(project._id)'><span class="glyphicon glyphicon-trash"></span></button></div>
+          </td>
         </tr>
       </tbody>
     </table>
@@ -100,6 +104,5 @@
     <script type="text/javascript" src="/js/filter.js"></script>
     <script type="text/javascript" src="/js/services.js"></script>
     <script type="text/javascript" src="/js/controller.js"></script>
-    <script type="text/javascript" src="/js/main.js"></script>
   </body>
 </html>

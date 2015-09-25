@@ -1,7 +1,7 @@
 body {
   padding: 50px;
   font-family: 'Poiret One', cursive;
-  background-color: beige;
+  background-color: #f6ebdf;
 }
 
 a {
@@ -15,13 +15,11 @@ table{
   background-color: #bed68b;
 }
 
-
-
 th{
   font-size: 16px;
   padding: 5px;
   text-align: center;
-  background-color: #d6c98b;
+  background-color: #d89b46;
   color: white;
 }
 
@@ -68,6 +66,7 @@ input{
   margin: auto;
   border-radius: 15px;
   color: white;
+  border: thin #884040 solid;
 }
 
 .width{
@@ -79,20 +78,30 @@ input{
   display: table;
 }
 
-.table-bordered{
-  border: thick black;
-}
-
 .btn-primary{
   background-color: #7a4d8b;
   border: #7a4d8b;
 }
 
-.btn-success{
+.btn-primary:hover{
+  background-color: #613d6f;
+}
+
+.btn-success, .btn-success:disabled, .btn-success:disabled:hover{
   background-color: #008282;
   border: #008282
 }
 
-.project-table{
-  padding: 5px;
+.btn-success:hover{
+  background-color: #006868;
 }
+
+.btn-danger{
+  background-color: #9c4949;
+  border-color: #9c4949;
+}
+
+.btn-danger:hover{
+  background-color: #7c3a3a;
+}
+

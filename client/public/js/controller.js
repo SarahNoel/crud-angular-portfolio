@@ -4,6 +4,15 @@ app.controller('MainController',['$scope', '$http', 'PortfolioService', function
   $scope.addOne = function(){
     PortfolioService.addOne($scope, $http);
   };
+  $scope.getOne = function(id){
+    PortfolioService.getOne($scope, $http, id);
+  };
+  $scope.updateOne = function(){
+    PortfolioService.updateOne($scope, $http, this);
+  };
+  $scope.deleteOne = function(){
+    PortfolioService.deleteOne($scope, $http, this);
+  };
 
   PortfolioService.getAll($scope, $http);
 

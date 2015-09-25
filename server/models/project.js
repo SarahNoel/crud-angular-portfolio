@@ -7,7 +7,8 @@ var Project = new Schema({
   description: String,
   tags: [String],
   group: Boolean,
-  group_members: [String]
+  group_members: [String],
+  url: String
 });
 
 module.exports = mongoose.model('projects', Project);

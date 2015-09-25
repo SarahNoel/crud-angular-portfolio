@@ -1,10 +1,15 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: 'Poiret One', cursive;
 }
 
 a {
   color: #00B7FF;
+}
+
+table{
+  margin-top: 15px;
+  width: 100%;
 }
 
 .project-table{
@@ -13,8 +18,52 @@ a {
 
 th{
   padding: 5px;
+  text-align: center;
 }
 
 td{
   padding: 5px;
+}
+
+.btn-edit{
+  margin: 5px;
+}
+
+.btn-add{
+  float: right;
+}
+
+.add-form{
+  width: 85%;
+  margin: auto;
+}
+
+.fill{
+  background-color: beige;
+}
+
+input{
+  margin: 15px;
+}
+
+.form-div{
+  margin-bottom: 20px;
+}
+
+.radio{
+  margin-left: 5px;
+  padding: 10px;
+}
+
+.title-info{
+  text-align: center;
+}
+
+.width{
+  width: 85%;
+}
+
+.edit-buttons{
+  margin: auto;
+  display: table;
 }

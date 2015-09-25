@@ -32,7 +32,7 @@
       </thead>
       <tbody>
         <tr ng-repeat= 'project in projectData' ng-class-odd="'fill'">
-          <td><a href="{{project.url}}"> {{project.name}} </a></td>
+          <td><a href="{{project.url}}" target= '_blank' > {{project.name}} </a></td>
           <td> {{project.description}} </td>
           <td ng-repeat="tag in project.tags"> {{tag}} </td>
           <td> {{project.group | groupies}} </td>

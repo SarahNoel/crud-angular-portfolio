@@ -16,7 +16,7 @@ var projectSeed = [
   'tags': ['Angular'],
   'group': false,
   'group_members': 'N/A',
-  'url': 'http://github.com/SarahNoel/reddit-clone'
+  'url': 'http://sarahnoel.github.io/reddit-clone/'
   },
   {
   'name': 'Translator App',

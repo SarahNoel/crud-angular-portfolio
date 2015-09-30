@@ -1,0 +1,92 @@
+
+    <br>
+    <br>
+    <div class ='width'>
+      <button ng-hide='hide' ng-click = 'hide = !hide; update = true; edit=true' class= 'btn btn-primary btn-add'>Add New Exercise</button>
+    <br>
+    <br>
+    <table ng-hide ='edit' class = 'table-bordered project-table'>
+      <thead>
+        <tr>
+          <th>Project Name</th>
+          <th>Description</th>
+          <th>Topics</th>
+          <th>Group Project?</th>
+          <th>Group Members</th>
+          <th>Edit Options</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat= 'project in projectData' ng-class-odd="'fill'">
+          <td><a href="{{project.url}}" target= '_blank' > {{project.name}} </a></td>
+
+          <td> {{project.description}} </td>
+
+          <td ng-repeat="tag in project.tags"> {{tag}} </td>
+
+          <td> {{project.group | groupies}} </td>
+
+          <td ng-repeat="member in project.group_members"> {{member}} </td>
+
+          <td>
+          <div class= 'edit-buttons'>
+
+            <button class ='btn btn-success btn-edit' ng-click= "getOne(project._id)"><span class="glyphicon glyphicon-pencil"></span></button>
+
+            <button class ='btn-edit btn btn-danger' ng-click = 'deleteOne(project._id)'><span class="glyphicon glyphicon-trash"></span></button>
+          </div>
+
+          </td>
+        </tr>
+      </tbody>
+    </table>
+</div>
+
+  <div ng-show='hide' class='add-form'>
+  <div class = 'form-div'>
+    <form id='addForm' name='addForm' class="form-inline" role="form">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input name="name" ng-model="name" type="text" class="form-control" required>
+      </div>
+
+     <div class="form-group">
+        <label for="description">Description:</label>
+        <input ng-model="description" type="text" class="form-control"required>
+      </div>
+
+      <div class="form-group">
+        <label for="topic">Topics:</label>
+        <input ng-model="tags" type="text" class="form-control"required>
+      </div>
+
+      <div class="form-group">
+        <label for="url">Project URL:</label>
+        <input ng-model="url" type="text" class="form-control" required>
+      </div>
+
+      <div class="form-group">
+        <label for="group">Group Project?</label>
+        <div class="radio">
+        <label><input ng-click='groupProj = true' ng-model='group' type="radio" value="true" required>Yes</label>
+        </div>
+
+        <div class="radio">
+          <label><input ng-click='groupProj = false' ng-model='group' type="radio" value="false" required>No</label>
+        </div>
+      </div>
+
+      <div class="form-group" ng-show='groupProj'>
+        <label for="members">Group Members:</label>
+        <input ng-model="group_members" type="text" class="form-control">
+      </div>
+    </form>
+    </div>
+
+      <button ng-click="addOne()" ng-show = 'update' type="submit" class="btn btn-success" ng-disabled="addForm.$invalid">Add Project</button>
+
+      <button ng-click="update=false; hide=false; edit=false " ng-show = 'update' type="submit" class="btn btn-warning">Cancel</button>
+
+      <button ng-disabled="addForm.$invalid" ng-click="updateOne()" ng-hide = 'update' type="submit" class="btn btn-warning">Save</button>
+  </div>
+

@@ -1,6 +1,4 @@
 var express = require('express');
-var passport = require('passport');
-var Account = require('../models/account');
 var router = express.Router();
 var Project = require('../models/project.js');
 
@@ -14,7 +12,7 @@ router.get('/projects', function(req, res, next) {
 //get one project
 router.get('/project/:id', function(req, res, next) {
   Project.findById(req.params.id, function(err, project){
-    res.json(project,  { user : req.user });
+    res.json(project);
   });
 });
 
@@ -22,7 +20,7 @@ router.get('/project/:id', function(req, res, next) {
 router.post('/projects', function(req, res, next) {
   new Project(req.body)
   .save(function(err, project){
-    res.json(project, { user : req.user });
+    res.json(project);
   });
 });
 
@@ -32,7 +30,7 @@ router.put('/project/:id', function(req, res, next) {
   var update = req.body;
   var options = {new: true};
   Project.findOneAndUpdate(query, update, options, function(err, project){
-    res.json(project,  { user : req.user });
+    res.json(project);
   });
 });
 
@@ -40,7 +38,7 @@ router.put('/project/:id', function(req, res, next) {
 router.delete('/project/:id', function(req, res, next){
   var query = {'_id': req.params.id};
   Project.findOneAndRemove(query, function(error, project){
-    res.json(project,  { user : req.user });
+    res.json(project);
   });
 });
 
